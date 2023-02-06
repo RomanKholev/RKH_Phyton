@@ -4,20 +4,20 @@
 # 5 -> 1 0 1 1 0
 # 2
 
-n = int(input("Введите колличсетво монеток: "))
-print(f"введит {n} раз положение монет. 0 - Орлом вверх, 1 - Решкой вверх")
-orel = 0
-reshka = 0
-for _ in range(n):
-    coin = int(input())
-    if coin == 0:
-        orel += 1
-    if coin == 1:
-        reshka += 1
-if orel < reshka:
-    print (f"Нужно перевернуть {orel} монет решкой вверх")
-else:
-    print(f"Нужно перевернуть {reshka} монет орлом вверх")
+# n = int(input("Введите колличсетво монеток: "))
+# print(f"введите {n} раз положение монет. 0 - Орлом вверх, 1 - Решкой вверх")
+# orel = 0
+# reshka = 0
+# for _ in range(n):
+#     coin = int(input())
+#     if coin == 0:
+#         orel += 1
+#     if coin == 1:
+#         reshka += 1
+# if orel < reshka:
+#     print (f"Нужно перевернуть {orel} монет решкой вверх")
+# else:
+#     print(f"Нужно перевернуть {reshka} монет орлом вверх")
 
 
 
@@ -27,24 +27,34 @@ else:
 # 4 4 -> 2 2
 # 5 6 -> 2 3
 #
-import math
-s = int(input("Введите сумму чисел: "))
-p = int(input("Введите произведение чисел: "))
-d = (s * s) - (4 * p)
-sd = int(math.sqrt(d))
-y = int((s+sd)/2)
-x = int(s- y)
-print(y, x)
+# import math
+# s = int(input("Введите сумму чисел: "))
+# p = int(input("Введите произведение чисел: "))
+# d = (s * s) - (4 * p)
+# sd = int(math.sqrt(d))
+# y = int((s+sd)/2)
+# x = int(s- y)
+# print(y, x)
+# второй вариант рещения
 
+print('Введите число S')
+S = int(input())
+print('Введите число P')
+P = int(input())
+for num1 in range(S-1):
+    num2 = S - num1
+    if num1*num2 == P and (num1 + num2 == S):
+        print(num1,num2)
+        break
 
 # Задача 14: Требуется вывести все целые степени двойки (т.е. числа вида 2k), не превосходящие числа N.
 # 10 -> 1 2 4 8
 # пользователь будет вводить каждое число на новой строке для задач 10, 12.
 
-n = int(input("введите число: "))
-count = 1
-while count <= n:
-    print(count)
-    count = count * 2
-
+# n = int(input("введите число: "))
+# count = 1
+# while count <= n:
+#     print(count)
+#     count *= 2
+#
 
